@@ -2,13 +2,12 @@
 
 namespace Tests\Unit;
 
+use App\Services\SummarizeService;
 use PHPUnit\Framework\TestCase;
 
 class SummarizeApiTest extends TestCase
 {
-    /**
-     * A basic unit test example.
-     */
+   /** @test */
     public function it_correctly_summarizes_data_entries()
     {
         $data = [
