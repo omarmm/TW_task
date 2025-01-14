@@ -26,3 +26,18 @@ This project is a Laravel-based API that processes and summarizes large datasets
    php artisan test
 
 ## please note that I have used /**@test */ annotations , if it will cause warnings it could be replaced with #[Test] I just afraid that for the old versions #[Test] may make the test not working
+
+3. **API Request Example**
+  ```bash
+php artisan serve
+
+curl -X POST http://localhost:8000/api/summarize \
+-H "Content-Type: application/json" \
+-H "Accept: application/json" \
+-d '{
+  "data": [
+    { "id": 1, "value": 10 },
+    { "id": 2, "value": 20 },
+    { "id": 3, "value": 30 }
+  ]
+}'
