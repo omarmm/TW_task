@@ -15,6 +15,9 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware) {
         //
     })
+    ->withCommands([
+        App\Console\Commands\ProcessDatasetCommand::class,
+    ])
     ->withExceptions(function (Exceptions $exceptions) {
         $exceptions->render(function (JsonException $e, Request $request) {
             if ($request->is('api/*')) {
